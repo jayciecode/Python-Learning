@@ -1,0 +1,73 @@
+Tax= 0.78
+print('Welcome to Savings Calculator, please respond to the following questions if you do not have one of these charges please input 0')
+MonthCalc= input("Welcome, please press 1 for Monthly savings and press 2 for yearly savings: ")
+MonthCalc= int(MonthCalc)
+if MonthCalc== 1:
+    print("Welcome, to the monthly savings calculator.")
+    Pay= input("Do you make hourly income? ")
+    if Pay == "yes":
+        HourlyIncomeMonth = input("What do you make an hour? ")
+        Hours= input("How many hours do you work a week? ")
+        Income= int(HourlyIncomeMonth)*int(Hours)*4
+        IncomePT= int(Income) * Tax
+        print('Your income after taxes is', IncomePT)
+
+    if Pay == "no":
+        SalaryIncome = input('What is your yearly income before taxes?: ')
+        Income= int (SalaryIncome)/12
+        IncomePT= int(Income) * Tax
+        print('Your income after taxes is', IncomePT)
+        
+
+    
+
+    Rent= input('What is you rent or morgage fees, per month? ')
+    Water= input('What is your water bill per month? ')
+    Electrcity= input('What is your electric bill per month? ')
+    Internet= input("What is your internet bill per month? ")
+    Insurance= input("What do you pay for insurance every month? ")
+    Groceries= input('What do you spend on groceries each month? ')
+    Misc= input('What do you spend on misc items a month ie fast-food, shopping, etc? ')
+    Bills= input("Please include any other expensies or bills not perviously mentioned (per month) I did not include: ")
+
+    TotalSpending= int (Rent) +int (Water) + int (Electrcity) + int (Internet) + int (Insurance) + int (Groceries) + int (Misc) + int (Bills)
+    print("You total spending is",TotalSpending)
+    Savings= IncomePT-TotalSpending
+    print ('Your savings are', Savings)
+
+
+if MonthCalc== 2:
+    print("Welcome, to the yearly savings calculator.")
+    Pay= input("Do you make hourly income? ")
+    if Pay == "yes":
+
+        HourlyIncome= input("What do you make an hour? ")
+        Hours= input("How many hours do you work a week? ")
+        Income= int(HourlyIncome)*int(Hours)*47
+
+    if Pay == "no":
+        Income= input('Income before taxes: ')
+
+
+    IncomePT= int(Income) * Tax
+    print('Your income after taxes is', IncomePT)
+
+    Rent= input('What is you rent or morgage fees, per month? ')
+    RentPerMonth= int(Rent)*12
+    Water= input('What is your water bill per month? ')
+    WaterPerYear= int(Water)*12
+    Electrcity= input('What is your electric bill per month? ')
+    ElectricPerYear= int(Electrcity)*12
+    Internet= input("What is your internet bill per month? ")
+    InternetPerYear= int(Internet)*12
+    Insurance= input("What do you pay for insurance every month? ")
+    InsurancecPerYear= int (Insurance)*12
+    Groceries= input('What do you spend on groceries each month? ')
+    GroceriesPerYear= int(Groceries)*12
+    Misc= input('What do you spend on misc items a month ie fast-food, shopping, etc? ')
+    MiscPerYear= int(Misc)*12
+    Bills= input("Please include any other expensies or bills not perviously mentioned (per month) I did not include: ")
+    BillsPerYear= int(Bills)*12
+    TotalSpending= RentPerMonth+WaterPerYear+ElectricPerYear+InternetPerYear+InsurancecPerYear+GroceriesPerYear+MiscPerYear+BillsPerYear
+    Savings= IncomePT-TotalSpending
+    print ('Your savings are', Savings)
