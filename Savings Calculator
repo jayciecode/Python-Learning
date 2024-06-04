@@ -1,0 +1,24 @@
+print('Welcome to Savings Calculator, please respond to the following questions if you do not have one of these charges please input 0')
+Income= input('Income before taxes: ')
+Tax= 0.78
+IncomePT= int(Income) * Tax
+print('Your income after taxes is', IncomePT)
+Rent= input('What is you rent or morgage fees, per month? ')
+RentPerMonth= int(Rent)*12
+Water= input('What is your water bill per month? ')
+WaterPerYear= int(Water)*12
+Electrcity= input('What is your electric bill per month? ')
+ElectricPerYear= int(Electrcity)*12
+Internet= input("What is your internet bill per month? ")
+InternetPerYear= int(Internet)*12
+Insurance= input("What do you pay for insurance every month? ")
+InsurancecPerYear= int (Insurance)*12
+Groceries= input('What do you spend on groceries each month? ')
+GroceriesPerYear= int(Groceries)*12
+Misc= input('What do you spend on misc items a month ie fast-food, shopping, etc? ')
+MiscPerYear= int(Misc)*12
+Bills= input("Please include any other expensies or bills not perviously mentioned (per month) I did not include: ")
+BillsPerYear= int(Bills)*12
+TotalSpending= RentPerMonth+WaterPerYear+ElectricPerYear+InternetPerYear+InsurancecPerYear+GroceriesPerYear+MiscPerYear+BillsPerYear
+Savings= IncomePT-TotalSpending
+print ('Your savings are', Savings)
